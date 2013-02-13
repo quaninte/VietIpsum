@@ -1,0 +1,7 @@
+services:
+    vietipsum.dictionary:
+        class: Brodev\VietIpsumBundle\Ipsum\Dictionary
+
+    vietipsum.generator:
+        class: Brodev\VietIpsumBundle\Ipsum\Generator
+        arguments: [@vietipsum.dictionary]

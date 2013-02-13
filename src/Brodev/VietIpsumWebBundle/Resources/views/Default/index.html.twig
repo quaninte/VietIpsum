@@ -1,0 +1,33 @@
+{% extends 'BrodevVietIpsumWebBundle::base.html.twig' %}
+
+{% block content %}
+<form action="{{ url('generate_viet_ipsum') }}" method="post" id="ipsumGenerator">
+    {{ form_widget(form) }}
+
+    <input type="submit" class="btn btn-primary">
+</form>
+
+<div id="result">
+    <h2>Result:</h2>
+    <hr/>
+    <span></span>
+    <hr/>
+</div>
+{% endblock %}
+
+{% block foot_script %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    {% javascripts filter='?yui_js' output='js/compiled/base.js'
+    '@BrodevVietIpsumWebBundle/Resources/public/js/jquery.form.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            $('#ipsumGenerator').ajaxForm(function(data) {
+                $('#result span').html(data);
+            });
+        });
+    </script>
+{% endblock %}
