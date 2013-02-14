@@ -19,8 +19,17 @@ class DefaultController extends Controller
     {
         $form = $this->createForm(new GenerateType());
 
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+                'SELECT s FROM BrodevVietIpsumWebBundle:Source s WHERE s.active = :active ORDER BY s.order ASC'
+            )->setParameter('active', true)
+        ;
+
+        $sources = $query->getResult();
+
         return array(
             'form' => $form->createView(),
+            'sources' => $sources,
         );
     }
 

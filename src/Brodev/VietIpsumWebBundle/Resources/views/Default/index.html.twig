@@ -1,10 +1,25 @@
 {% extends 'BrodevVietIpsumWebBundle::base.html.twig' %}
 
+
 {% block content %}
+{# Select source #}
+<form>
+    <fieldset>
+        <label for="select-source">Select Source</label>
+
+        <select id="select-source">
+            {% for source in sources %}
+            <option value="{{ source.id }}" data-content="{{ source.content }}">{{ source.name }}</option>
+            {% endfor %}
+        </select>
+
+    </fieldset>
+</form>
+
 <form action="{{ url('generate_viet_ipsum') }}" method="post" id="ipsumGenerator">
     {{ form_widget(form) }}
 
-    <input type="submit" class="btn btn-primary">
+    <input type="submit" class="btn btn-primary" value="Generate">
 </form>
 
 <div id="result">
@@ -15,6 +30,18 @@
 </div>
 {% endblock %}
 
+{# header style #}
+{% block head_style %}
+    {{ parent() }}
+    <style type="text/css">
+        #generate_content {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+{% endblock %}
+
+{# foot script #}
 {% block foot_script %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     {% javascripts filter='?yui_js' output='js/compiled/base.js'
@@ -25,9 +52,25 @@
 
     <script type="text/javascript" language="javascript">
         $(document).ready(function() {
-            $('#ipsumGenerator').ajaxForm(function(data) {
-                $('#result span').html(data);
+            $('#ipsumGenerator').ajaxForm({
+                success: function(data) {
+                    $('#result span').html(data);
+                },
+                beforeSubmit: function() {
+                    $('#result span').html('Please wait...');
+                }
             });
+            useSelectedContent();
         });
+
+        // select
+        $('#select-source').change(function() {
+            useSelectedContent();
+        });
+
+        function useSelectedContent() {
+            var content = $('#select-source option:selected').data('content');
+            $('#generate_content').val(content);
+        }
     </script>
 {% endblock %}
