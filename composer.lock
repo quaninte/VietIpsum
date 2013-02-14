@@ -4,27 +4,27 @@
         {
             "name": "brodev/viet-ipsum-bundle",
             "version": "dev-master",
-            "target-dir": "Brodev/Bundle/VietIpsumBundle",
+            "target-dir": "Brodev/VietIpsumBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/quaninte/VietIpsumBundle.git",
-                "reference": "1928f51416a123346c656913353b858046643bb5"
+                "reference": "210b9fb141f728d75a61d25caf587a9700df8785"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/quaninte/VietIpsumBundle/zipball/1928f51416a123346c656913353b858046643bb5",
-                "reference": "1928f51416a123346c656913353b858046643bb5",
+                "url": "https://api.github.com/repos/quaninte/VietIpsumBundle/zipball/210b9fb141f728d75a61d25caf587a9700df8785",
+                "reference": "210b9fb141f728d75a61d25caf587a9700df8785",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
                 "symfony/framework-bundle": ">=2.0"
             },
-            "time": "2013-02-14 16:43:16",
+            "time": "2013-02-14 17:53:08",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
-                    "Brodev\\Bundle\\VietIpsumBundle": ""
+                    "Brodev\\VietIpsumBundle": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
