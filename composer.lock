@@ -1,6 +1,50 @@
 {
-    "hash": "df57edbeeada8fca832fa9fb365b8141",
+    "hash": "4e2b4b8609504f753bf274629994672c",
     "packages": [
+        {
+            "name": "brodev/viet-ipsum-bundle",
+            "version": "dev-master",
+            "target-dir": "Brodev/Bundle/VietIpsumBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/quaninte/VietIpsumBundle.git",
+                "reference": "1928f51416a123346c656913353b858046643bb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/quaninte/VietIpsumBundle/zipball/1928f51416a123346c656913353b858046643bb5",
+                "reference": "1928f51416a123346c656913353b858046643bb5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": ">=2.0"
+            },
+            "time": "2013-02-14 16:43:16",
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Brodev\\Bundle\\VietIpsumBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Quan MT",
+                    "email": "info@brodev.com"
+                }
+            ],
+            "description": "Generate lorem ipsum text with changeable dictionary",
+            "keywords": [
+                "Lorem ipsum",
+                "ipsum",
+                "lorem",
+                "vietnamese"
+            ]
+        },
         {
             "name": "craue/formflow-bundle",
             "version": "dev-master",
@@ -989,12 +1033,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phiamo/MopaBootstrapBundle.git",
-                "reference": "cba2247073c115c07c0b928a062e739c52964318"
+                "reference": "3dc43ada9f78611def581055e9ca9eca60e30ced"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/cba2247073c115c07c0b928a062e739c52964318",
-                "reference": "cba2247073c115c07c0b928a062e739c52964318",
+                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/3dc43ada9f78611def581055e9ca9eca60e30ced",
+                "reference": "3dc43ada9f78611def581055e9ca9eca60e30ced",
                 "shasum": ""
             },
             "require": {
@@ -1008,7 +1052,7 @@
                 "knplabs/knp-paginator-bundle": "dev-master",
                 "twitter/bootstrap": "2.0.*"
             },
-            "time": "2013-02-13 15:51:14",
+            "time": "2013-02-14 09:23:58",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1680,6 +1724,7 @@
         "mopa/bootstrap-bundle": 20,
         "twitter/bootstrap": 20,
         "knplabs/knp-paginator-bundle": 20,
-        "craue/formflow-bundle": 20
+        "craue/formflow-bundle": 20,
+        "brodev/viet-ipsum-bundle": 20
     }
 }
