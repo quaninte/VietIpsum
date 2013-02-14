@@ -5,3 +5,6 @@ services:
     vietipsum.generator:
         class: Brodev\VietIpsumBundle\Ipsum\Generator
         arguments: [@vietipsum.dictionary]
+
+    simple_html_dom:
+        class: simple_html_dom

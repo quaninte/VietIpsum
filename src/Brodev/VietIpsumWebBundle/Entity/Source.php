@@ -37,7 +37,7 @@ class Source
     protected $active;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", name="source_order")
      */
     protected $order;
 
