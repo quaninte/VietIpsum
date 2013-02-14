@@ -23,7 +23,8 @@
         "twitter/bootstrap": "dev-master",
         "knplabs/knp-paginator-bundle": "dev-master",
         "knplabs/knp-menu-bundle": "1.1.0",
-        "craue/formflow-bundle": "dev-master"
+        "craue/formflow-bundle": "dev-master",
+        "brodev/viet-ipsum-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
