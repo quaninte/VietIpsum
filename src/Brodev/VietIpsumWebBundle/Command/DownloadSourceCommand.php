@@ -36,7 +36,6 @@ class DownloadSourceCommand extends ContainerAwareCommand
         );
 
         $sourceUrl = 'http://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_c%C3%A1c_m%C3%B3n_%C4%83n_Vi%E1%BB%87t_Nam';
-        $sourceUrl = 'http://localhost/monan.html';
 
         // get all tables
         $this->simpleHtmlDom = $this->getContainer()->get('simple_html_dom');
